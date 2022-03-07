@@ -1,0 +1,2 @@
+class Wildflower < ApplicationRecord
+end
