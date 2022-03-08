@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Link, Outlet } from 'react-router-dom';
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className='border'>
+      <h1>Wildflowers of the Wasatch Front</h1>
+      <nav
+        style={{
+          borderBottom:'1px solid'
+        }}
         >
-          Learn React
-        </a>
-      </header>
+          <Link to='/home'>Home</Link> - {' '}
+          <Link to='/wildflowers'>Wildflowers</Link> - {' '}
+          <Link to='/wildflowers/new'>New Wildflower</Link> - {' '}
+         // <Link to='/about'>About</Link>
+        </nav>
+        <p>Outlet component here</p>
+        <Outlet />
     </div>
   );
 }
