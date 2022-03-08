@@ -83,3 +83,25 @@ end
 
 * After routes are added, go to controller file and define the route methods 
 
+* test all methods with postman app
+
+# SET UP RAILS AND REACT 
+* next connect our rails app to react app. in the terminal in my rails project directory, you can either create react app or clone a starter react project down.  in this project, we are naming the react folder 'client' 
+
+ ```
+ $ cd (into rails project directory) 
+ $ yarn create react-app client
+ $ cd client
+ $ yarn start 
+
+//option 2
+$ git clone 'git@github.com address' client
+$ cd client
+$ yarn
+$yarn start 
+```
+* add proxy in client/package.json. we always need to have rails running on port:3001 for this to work 
+```
+"proxy": "http://localhost:3001",
+
+```
