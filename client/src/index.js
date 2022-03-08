@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import About from "./pages/About"
+import Home from "./pages/Home"
+import DataProvider from "./providers/DataProvider"
+import Wildflowers from "./pages/Wildflowers"
+import WildflowerShow from './pages/WildflowerShow';
+import WildflowerForm from './pages/WildflowerForm'
+
 
 const NotFound = ()=> {
   return <p>Path Not Found</p>
@@ -18,6 +25,9 @@ ReactDOM.render(
         <Route path="/about" element={<About />} />
         <Route path="/home" element={<Home />} />
         <Route path="/wildflowers" element={<Wildflowers />} />
+        <Route path="/wildflowers/new" element={<WildflowerForm />} />
+        <Route path="/wildflowers/:id" element={<WildflowerShow />} />
+        <Route path="/wildflowers/:id/edit" element={<WildflowerForm />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
