@@ -55,4 +55,31 @@ $ git push origin main
 ```
 * helpful tip: test code and push code to github frequently when the code is working!  
 
+* run command to create controller files 
+
+```
+$ rails g controller api/wildflowers
+
+```
+
+* next step, go to routes.rb file in your project and create the routes using CRUD 
+
+```
+Rails.application.routes.draw do
+  
+namespace :api do
+
+get 'wildflowers', to: 'wildflowers#index'  
+get 'wildflowers/:id', to: 'wildflowers#show'
+post 'wildflowers', to: 'wildflowers#create'
+put 'wildflowers/:id', to: 'wildflowers#update'
+delete 'wildflowers/:id', to: 'wildflowers#destroy'
+
+
+  end
+end
+
+```
+
+* After routes are added, go to controller file and define the route methods 
 
