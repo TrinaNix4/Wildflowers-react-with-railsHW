@@ -5,6 +5,9 @@ const Home = ()=>{
     return (
         <div>
             <h1>Home Page</h1>
+
+            <h1>Austin did this</h1>
+
             <button onClick={()=>setDataDemo('dataDemo changed in home')}>Change dataDemo</button>
             <p>demoState: {dataDemo}</p>
         </div>
