@@ -15,7 +15,7 @@ const DataProvider = (props) => {
   const getWildflowers = async () => {
     //axios call; asynchornous because might take time to get data back
     try{
-      let res = await axios.get('api/wildflowers/')
+      let res = await axios.get('/api/wildflowers/')
       //axios gives data back as object with data key
       console.log(res)
       setWildflowers(res.data)
@@ -24,11 +24,27 @@ const DataProvider = (props) => {
       console.log(err.response.data)
     }
   }
+//DELETE - 1-need to remove from DB
+//2- need to remove it from state (or front end)
+//3- need to hookup button click 
+
+const deleteWildflower = async(id) => {
+try{
+  //this is step 1 remove from DB
+  let res = await axios.delete(`/api/wildflowers/${id}`)
+  //this is step 2 - needs to be done secondly cause user might think deleted but it actually wasn't
+  let filteredWildflowers = wildflowers.filter(f => f.id !== res.data.id)
+  setWildflowers(filteredWildflowers)
+}catch(err){
+  alert('err in delete function')
+}
+}
   //create an object that will be 'global state'
   const wildflowerProviderThing = {
     getWildflowers, 
     setWildflowers,
-    wildflowers
+    wildflowers, 
+    deleteWildflower
 
   };
   return(
