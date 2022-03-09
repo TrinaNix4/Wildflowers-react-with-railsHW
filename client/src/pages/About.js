@@ -4,6 +4,7 @@ const About = ()=>{
     const {dataDemo, setDataDemo} = useContext(DataContext)
     return (
         <div>
+            <h1>Steve</h1>
             <h1>About Page</h1>
             <button onClick={()=>setDataDemo('dataDemo changed in about')}>Change dataDemo</button>
             <p>dataDemo: {dataDemo}</p>
