@@ -12,7 +12,7 @@ function App() {
           <Link to='/home'>Home</Link> - {' '}
           <Link to='/wildflowers'>Wildflowers</Link> - {' '}
           <Link to='/wildflowers/new'>New Wildflower</Link> - {' '}
-         // <Link to='/about'>About</Link>
+          <Link to='/about'>About</Link>
         </nav>
         <p>Outlet component here</p>
         <Outlet />

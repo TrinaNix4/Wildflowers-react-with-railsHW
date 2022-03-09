@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from "./pages/About"
 import Home from "./pages/Home"
 import DataProvider from "./providers/DataProvider"
 import Wildflowers from "./pages/Wildflowers"
 import WildflowerShow from './pages/WildflowerShow';
 import WildflowerForm from './pages/WildflowerForm'
+import "./index.css"; 
+import "./App.css"; 
 
 
 const NotFound = ()=> {
