@@ -6,7 +6,7 @@ def index
 end
 
 def show
-  render json: @wildflower
+  render json: @Bug
 end 
 
 def destroy
